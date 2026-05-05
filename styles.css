@@ -563,6 +563,88 @@ header.scrolled {
     margin-top: 2rem;
 }
 
+/* Marcas que Confiam */
+.marcas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.marca-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.marca-item img {
+    max-width: 140px;
+    height: auto;
+    filter: grayscale(100%) brightness(1.5);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.marca-name {
+    position: absolute;
+    bottom: -15px;
+    font-size: 0.75rem;
+    color: var(--text-white);
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+.marca-item:hover {
+    opacity: 1;
+}
+
+.marca-item:hover img {
+    transform: scale(1.08);
+}
+
+.marca-item:hover .marca-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.marca-placeholder {
+    width: 140px;
+    height: 70px;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.marca-placeholder .marca-plus {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 300;
+    transition: color 0.4s ease;
+}
+
+.marca-placeholder:hover {
+    border-color: rgba(209, 17, 17, 0.5);
+}
+
+.marca-placeholder:hover .marca-plus {
+    color: var(--color-red);
+}
+
 /* Contato */
 .social-links {
     display: flex;
